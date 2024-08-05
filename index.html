@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal NAS Game Library</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="icon" type="image/x-icon" href="pikmin_pfp.ico">
+    </head>
+
+    <body >
+    <header >
+        <h1>Welcome to The PikMin System</h1>
+        <br>
+        <h2>Game Library Sub-system</h2>
+        <p>Explore, Filter, Search, and Launch Your Games</p>
+    </header>
+
+    <div id="add-game-modal" class="modal" >
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Game</h2>
+            <form id="add-game-form">
+                <label for="game-name">Game Name:</label>
+                <input type="text" id="game-name" name="game-name" required>
+
+                <label for="game-location">Game Location:</label>
+                <input type="text" id="game-location" name="game-location" required>
+
+                <button id="find-game-btn" type="button">Find Game</button>
+                <br>
+
+                <label for="game-tags">Tags (comma-separated):</label>
+                <input type="text" id="game-tags" name="game-tags">
+
+                <label for="game-series">Series:</label>
+                <input type="text" id="game-series" name="game-series">
+
+                <button id="add-game-submit-btn" type="button">Add Game</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="edit-game-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Game</h2>
+            <form id="edit-game-form">
+                <label for="edit-game-name">Game Name:</label>
+                <input type="text" id="edit-game-name" name="edit-game-name" required>
+
+                <label for="edit-game-location">Game Location:</label>
+                <input type="text" id="edit-game-location" name="edit-game-location" required>
+
+                <label for="edit-game-tags">Tags (comma-separated):</label>
+                <input type="text" id="edit-game-tags" name="edit-game-tags">
+
+                <label for="edit-game-series">Series:</label>
+                <input type="text" id="edit-game-series" name="edit-game-series">
+
+                <button id="edit-game-submit-btn" type="button">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <section id="search-filter" >
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search games..." />
+        </div>
+
+        <div class="filter-tags">
+            <label for="filter-tags"><h3>Filter by tags:</h3></label>
+            <select id="filter-tags" multiple>
+                <!-- Options will be populated dynamically -->
+            </select>
+        </div>
+    </section>
+
+    <section id="games" class="animate__animated animate__bounceIn">
+        <h2>Game Library</h2>
+        <div class="game-grid">
+            <!-- Game cards will be dynamically generated here -->
+        </div>
+    </section>
+
+    <button id="add-game-btn"><h2>Add Game</h2></button>
+
+
+    </body>
+</html>
